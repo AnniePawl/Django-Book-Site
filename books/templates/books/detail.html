@@ -7,5 +7,7 @@
   <li>{{book.author}}</li>
   <li>{{book.num_pages}}</li>
   <li>{{book.date_published}}</li>
-  <li>{{books.tags}}</li>
+  {%for tag in book.tags.all%}
+  <li>{{tag}}</li>
+  {%endfor%}
 </ul>
